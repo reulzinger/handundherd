@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webdesign für Gastronomie – Hand &amp; Herd, Frankfurt / Rhein-Main</title>
+  <meta name="description" content="Websites für Restaurants, Cafés und Imbisse im Rhein-Main-Gebiet: Speisekarte online, Reservierungsanfrage, Google Maps. Festpreis, in 2 Wochen online.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1E3A5F',
+            terracotta: '#C4622D',
+            offwhite: '#F5F2ED',
+          },
+          fontFamily: {
+            display: ['Montserrat', 'sans-serif'],
+            sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-offwhite font-sans text-navy antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-terracotta focus:px-4 focus:py-2 focus:text-offwhite">Zum Inhalt springen</a>
+
+  <header class="border-b border-navy/10 bg-offwhite">
+    <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-5 sm:flex-row sm:justify-between">
+      <a href="index.html" class="shrink-0" aria-label="Hand &amp; Herd – Startseite">
+        <img src="assets/logo-light.svg" alt="Hand &amp; Herd – Webdesign für Handwerker &amp; Gastronomen" class="h-14 w-auto" width="520" height="140">
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="flex items-center gap-5 font-display text-xs font-semibold uppercase tracking-[0.18em] sm:gap-8 sm:text-sm">
+          <li><a href="gastro.html" aria-current="page" class="text-terracotta">Gastronomie</a></li>
+          <li><a href="handwerk.html" class="transition-colors hover:text-terracotta">Handwerk</a></li>
+          <li><a href="kontakt.html" class="transition-colors hover:text-terracotta">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="bg-navy px-4 py-16 text-offwhite sm:py-24">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="font-display text-xs font-semibold uppercase tracking-[0.3em] text-terracotta">Für Restaurants, Cafés &amp; Imbisse</p>
+        <h1 class="mt-5 font-display text-3xl font-bold uppercase tracking-[0.1em] sm:text-5xl">Ihre Gäste googeln Sie.<br>Was finden sie?</h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-offwhite/90">
+          Eine veraltete Speisekarte als schiefes Handyfoto, falsche Öffnungszeiten, keine
+          Telefonnummer? Ich baue Ihnen eine Website, die Gäste in Ihr Lokal bringt –
+          zum Festpreis, in zwei Wochen online.
+        </p>
+        <a href="kontakt.html" class="mt-8 inline-block bg-terracotta px-8 py-4 font-display text-sm font-semibold uppercase tracking-[0.18em] text-offwhite transition-colors hover:bg-offwhite hover:text-navy">
+          Unverbindlich anfragen
+        </a>
+      </div>
+    </section>
+
+    <!-- Was Ihre Gäste brauchen -->
+    <section class="px-4 py-16 sm:py-24">
+      <div class="mx-auto max-w-5xl">
+        <h2 class="text-center font-display text-2xl font-bold uppercase tracking-[0.12em] sm:text-3xl">Alles, was Gäste vor dem Besuch suchen</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-center leading-relaxed">
+          Über 80 Prozent Ihrer Gäste schauen vor dem ersten Besuch ins Netz. Diese sechs
+          Dinge müssen sie dort in Sekunden finden – dafür sorge ich.
+        </p>
+        <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="border-t-2 border-terracotta pt-5">
+            <h3 class="font-display text-sm font-semibold uppercase tracking-[0.15em]">Speisekarte online</h3>
+            <p class="mt-3 leading-relaxed">
+              Ihre Karte als echte, gut lesbare Webseite statt PDF-Download – auf dem Handy
+              blätterbar, mit Preisen und Allergenkennzeichnung. Änderungen wie das
+              Wochengericht pflegen Sie selbst oder schicken sie mir kurz per E-Mail.
+            </p>
+          </article>
+          <article class="border-t-2 border-terracotta pt-5">
+            <h3 class="font-display text-sm font-semibold uppercase tracking-[0.15em]">Öffnungszeiten</h3>
+            <p class="mt-3 leading-relaxed">
+              Prominent auf jeder Seite, inklusive Ruhetag und Küchenschluss. Bei
+              Betriebsferien oder Feiertagen ändere ich die Zeiten für Sie am selben Tag –
+              damit niemand vor verschlossener Tür steht.
+            </p>
+          </article>
+          <article class="border-t-2 border-terracotta pt-5">
+            <h3 class="font-display text-sm font-semibold uppercase tracking-[0.15em]">Google-Maps-Anbindung</h3>
+            <p class="mt-3 leading-relaxed">
+              Eine Karte mit Ihrem Standort, ein Klick startet die Navigation. Dazu
+              Hinweise zu Parkplätzen und ÖPNV – wichtig für Gäste, die zum ersten Mal
+              kommen.
+            </p>
+          </article>
+          <article class="border-t-2 border-terracotta pt-5">
+            <h3 class="font-display text-sm font-semibold uppercase tracking-[0.15em]">Reservierungsanfrage</h3>
+            <p class="mt-3 leading-relaxed">
+              Ein einfaches Formular für Tischanfragen: Datum, Uhrzeit, Personenzahl.
+              Die Anfrage landet in Ihrem E-Mail-Postfach – ohne Provision, ohne
+              Drittanbieter-Abo, ohne Tablet am Tresen.
+            </p>
+          </article>
+          <article class="border-t-2 border-terracotta pt-5">
+            <h3 class="font-display text-sm font-semibold uppercase tracking-[0.15em]">Foodfotos, die Appetit machen</h3>
+            <p class="mt-3 leading-relaxed">
+              Ihre Gerichte sind das beste Argument. Ich berate Sie, welche Fotos Sie
+              brauchen, und vermittle auf Wunsch einen Foodfotografen aus der Region –
+              keine Stockfotos von fremden Tellern.
+            </p>
+          </article>
+          <article class="border-t-2 border-terracotta pt-5">
+            <h3 class="font-display text-sm font-semibold uppercase tracking-[0.15em]">Google-Business-Profil</h3>
+            <p class="mt-3 leading-relaxed">
+              Zur Website gehört Ihr Auftritt in der Google-Suche: Ich richte Ihr
+              Google-Business-Profil ein oder räume es auf – mit korrekten Zeiten, Fotos
+              und Link zur neuen Website.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beispiel-Ansicht mit Bildplatzhaltern -->
+    <section class="border-t border-navy/10 px-4 py-16 sm:py-24">
+      <div class="mx-auto max-w-5xl">
+        <h2 class="text-center font-display text-2xl font-bold uppercase tracking-[0.12em] sm:text-3xl">So könnte Ihre Seite aussehen</h2>
+        <div class="mt-12 grid gap-6 sm:grid-cols-3">
+          <div class="flex aspect-[4/3] items-center justify-center bg-terracotta p-6 text-center sm:col-span-2 sm:aspect-auto" role="img" aria-label="Platzhalter für ein großes Foodfoto">
+            <p class="font-display text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/90">
+              Platzhalter:<br>Großes Foodfoto –<br>Ihr Signature-Gericht
+            </p>
+          </div>
+          <div class="grid gap-6">
+            <div class="flex aspect-[4/3] items-center justify-center bg-navy p-6 text-center" role="img" aria-label="Platzhalter für ein Foto vom Gastraum">
+              <p class="font-display text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/70">
+                Platzhalter:<br>Gastraum mit Atmosphäre
+              </p>
+            </div>
+            <div class="flex aspect-[4/3] items-center justify-center bg-navy p-6 text-center" role="img" aria-label="Platzhalter für ein Foto vom Team">
+              <p class="font-display text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/70">
+                Platzhalter:<br>Sie und Ihr Team<br>hinterm Tresen
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pakete -->
+    <section class="bg-navy px-4 py-16 text-offwhite sm:py-24">
+      <div class="mx-auto max-w-5xl">
+        <h2 class="text-center font-display text-2xl font-bold uppercase tracking-[0.12em] sm:text-3xl">Pakete zum Festpreis</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-center leading-relaxed text-offwhite/85">
+          Keine Stundensätze, kein „Preis auf Anfrage“. Sie wissen vorher auf den Euro
+          genau, was Ihre Website kostet. Alle Preise einmalig zzgl. MwSt.
+        </p>
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <article class="flex flex-col bg-offwhite p-8 text-navy">
+            <h3 class="font-display text-lg font-bold uppercase tracking-[0.12em]">Digitale Speisekarte</h3>
+            <p class="mt-2 font-display text-4xl font-bold">790&nbsp;€</p>
+            <p class="mt-1 text-sm text-navy/70">einmalig, Festpreis</p>
+            <ul class="mt-6 flex-1 space-y-3 leading-relaxed">
+              <li class="border-l-2 border-terracotta pl-3">Einseitige Website mit Karte, Zeiten &amp; Kontakt</li>
+              <li class="border-l-2 border-terracotta pl-3">Speisekarte als Webseite, per QR-Code am Tisch nutzbar</li>
+              <li class="border-l-2 border-terracotta pl-3">Google-Maps-Anbindung &amp; Anfahrt</li>
+              <li class="border-l-2 border-terracotta pl-3">Impressum &amp; Datenschutz inklusive</li>
+            </ul>
+          </article>
+          <article class="relative flex flex-col border-2 border-terracotta bg-offwhite p-8 text-navy">
+            <p class="absolute -top-4 left-1/2 -translate-x-1/2 bg-terracotta px-4 py-1 font-display text-xs font-semibold uppercase tracking-[0.18em] text-offwhite">Meistgewählt</p>
+            <h3 class="font-display text-lg font-bold uppercase tracking-[0.12em]">Gastro Komplett</h3>
+            <p class="mt-2 font-display text-4xl font-bold">1.390&nbsp;€</p>
+            <p class="mt-1 text-sm text-navy/70">einmalig, Festpreis</p>
+            <ul class="mt-6 flex-1 space-y-3 leading-relaxed">
+              <li class="border-l-2 border-terracotta pl-3">Bis zu 5 Seiten: Start, Karte, Über uns, Galerie, Kontakt</li>
+              <li class="border-l-2 border-terracotta pl-3">Reservierungsanfrage per Formular</li>
+              <li class="border-l-2 border-terracotta pl-3">Google-Business-Profil einrichten oder aufräumen</li>
+              <li class="border-l-2 border-terracotta pl-3">Fotoberatung &amp; Bildauswahl</li>
+              <li class="border-l-2 border-terracotta pl-3">Einweisung: Wochenkarte selbst ändern</li>
+            </ul>
+          </article>
+          <article class="flex flex-col bg-offwhite p-8 text-navy">
+            <h3 class="font-display text-lg font-bold uppercase tracking-[0.12em]">Gastro Plus</h3>
+            <p class="mt-2 font-display text-4xl font-bold">1.990&nbsp;€</p>
+            <p class="mt-1 text-sm text-navy/70">einmalig, Festpreis</p>
+            <ul class="mt-6 flex-1 space-y-3 leading-relaxed">
+              <li class="border-l-2 border-terracotta pl-3">Alles aus Gastro Komplett</li>
+              <li class="border-l-2 border-terracotta pl-3">Mehrsprachige Speisekarte (z.&nbsp;B. Deutsch/Englisch)</li>
+              <li class="border-l-2 border-terracotta pl-3">Gutschein- oder Catering-Seite</li>
+              <li class="border-l-2 border-terracotta pl-3">Organisation eines Foodfoto-Shootings</li>
+              <li class="border-l-2 border-terracotta pl-3">3 Monate Änderungsservice inklusive</li>
+            </ul>
+          </article>
+        </div>
+        <p class="mt-8 text-center text-sm leading-relaxed text-offwhite/70">
+          Danach optional: Pflege &amp; kleine Änderungen für 29&nbsp;€ im Monat – monatlich kündbar.
+        </p>
+      </div>
+    </section>
+
+    <!-- Ablauf -->
+    <section class="px-4 py-16 sm:py-24">
+      <div class="mx-auto max-w-5xl">
+        <h2 class="text-center font-display text-2xl font-bold uppercase tracking-[0.12em] sm:text-3xl">In zwei Wochen online</h2>
+        <ol class="mt-12 grid gap-10 sm:grid-cols-3 sm:gap-8">
+          <li class="text-center">
+            <p class="font-display text-5xl font-bold text-terracotta" aria-hidden="true">1</p>
+            <h3 class="mt-3 font-display text-base font-semibold uppercase tracking-[0.18em]">Gespräch</h3>
+            <p class="mt-3 leading-relaxed">
+              Ich komme bei Ihnen im Lokal vorbei – gern außerhalb der Stoßzeiten – oder wir
+              telefonieren. Danach steht Ihr Festpreis.
+            </p>
+          </li>
+          <li class="text-center">
+            <p class="font-display text-5xl font-bold text-terracotta" aria-hidden="true">2</p>
+            <h3 class="mt-3 font-display text-base font-semibold uppercase tracking-[0.18em]">Entwurf</h3>
+            <p class="mt-3 leading-relaxed">
+              Nach einer Woche sehen Sie Ihre Seite im Browser – mit Ihrer Karte, Ihren
+              Zeiten, Ihren Fotos. Sie sagen, was noch fehlt.
+            </p>
+          </li>
+          <li class="text-center">
+            <p class="font-display text-5xl font-bold text-terracotta" aria-hidden="true">3</p>
+            <h3 class="mt-3 font-display text-base font-semibold uppercase tracking-[0.18em]">Online</h3>
+            <p class="mt-3 leading-relaxed">
+              Domain, Webspace, Google-Eintrag: Ich richte alles ein. Nach spätestens zwei
+              Wochen finden Ihre Gäste Sie im Netz.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Regionalität + CTA -->
+    <section class="border-t border-navy/10 px-4 py-16 text-center sm:py-24">
+      <div class="mx-auto max-w-2xl">
+        <p class="font-display text-xs font-semibold uppercase tracking-[0.3em] text-terracotta">Aus Frankfurt, für Rhein-Main</p>
+        <h2 class="mt-4 font-display text-2xl font-bold uppercase tracking-[0.12em] sm:text-3xl">Ich komme persönlich vorbei</h2>
+        <p class="mt-6 leading-relaxed">
+          Ob Sachsenhausen oder Wiesbaden, Offenbach oder Darmstadt: Ich arbeite nur mit
+          Betrieben aus der Region und kenne Ihre Gäste, weil ich selbst einer bin. Das
+          erste Gespräch führen wir bei Ihnen am Tisch – nicht per Videokonferenz.
+        </p>
+        <a href="kontakt.html" class="mt-8 inline-block bg-terracotta px-8 py-4 font-display text-sm font-semibold uppercase tracking-[0.18em] text-offwhite transition-colors hover:bg-navy">
+          Jetzt Festpreis anfragen
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-navy text-offwhite">
+    <div class="mx-auto max-w-6xl px-4 py-12">
+      <div class="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-between">
+        <img src="assets/logo-dark.svg" alt="Hand &amp; Herd – Webdesign für Handwerker &amp; Gastronomen" class="h-14 w-auto" width="520" height="140">
+        <div class="text-center sm:text-right">
+          <p class="font-display text-xs font-semibold uppercase tracking-[0.2em] text-terracotta">Kontakt</p>
+          <p class="mt-2 leading-relaxed text-offwhite/85">
+            Hand &amp; Herd Webdesign · Frankfurt am Main<br>
+            <a href="mailto:hallo@handundherd.de" class="underline decoration-terracotta underline-offset-4 hover:text-terracotta">hallo@handundherd.de</a>
+          </p>
+        </div>
+      </div>
+      <div class="mt-10 flex flex-col items-center gap-4 border-t border-offwhite/15 pt-6 sm:flex-row sm:justify-between">
+        <p class="text-sm text-offwhite/60">&copy; 2026 Hand &amp; Herd Webdesign</p>
+        <ul class="flex gap-6 font-display text-xs font-semibold uppercase tracking-[0.15em]">
+          <li><a href="impressum.html" class="hover:text-terracotta">Impressum</a></li>
+          <li><a href="datenschutz.html" class="hover:text-terracotta">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

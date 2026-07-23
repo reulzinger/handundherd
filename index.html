@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hand &amp; Herd – Webdesign für Handwerker &amp; Gastronomen im Rhein-Main-Gebiet</title>
+  <meta name="description" content="Websites zum Festpreis für kleine Restaurants und Handwerksbetriebe. Aus Frankfurt, für Rhein-Main. In 2 Wochen online.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1E3A5F',
+            terracotta: '#C4622D',
+            offwhite: '#F5F2ED',
+          },
+          fontFamily: {
+            display: ['Montserrat', 'sans-serif'],
+            sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-offwhite font-sans text-navy antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-terracotta focus:px-4 focus:py-2 focus:text-offwhite">Zum Inhalt springen</a>
+
+  <header class="border-b border-navy/10 bg-offwhite">
+    <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-5 sm:flex-row sm:justify-between">
+      <a href="index.html" class="shrink-0" aria-label="Hand &amp; Herd – Startseite">
+        <img src="assets/logo-light.svg" alt="Hand &amp; Herd – Webdesign für Handwerker &amp; Gastronomen" class="h-14 w-auto" width="520" height="140">
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="flex items-center gap-5 font-display text-xs font-semibold uppercase tracking-[0.18em] sm:gap-8 sm:text-sm">
+          <li><a href="gastro.html" class="transition-colors hover:text-terracotta">Gastronomie</a></li>
+          <li><a href="handwerk.html" class="transition-colors hover:text-terracotta">Handwerk</a></li>
+          <li><a href="kontakt.html" class="transition-colors hover:text-terracotta">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="px-4 pb-12 pt-16 text-center sm:pb-16 sm:pt-24">
+      <div class="mx-auto max-w-3xl">
+        <p class="font-display text-xs font-semibold uppercase tracking-[0.3em] text-terracotta">Aus Frankfurt, für Rhein-Main</p>
+        <h1 class="mt-5 font-display text-4xl font-bold uppercase tracking-[0.12em] sm:text-6xl">
+          Hand <span class="text-terracotta text-5xl sm:text-7xl align-baseline">&amp;</span> Herd
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl">
+          Websites für Menschen, die mit den Händen arbeiten: klare, schnelle Internetauftritte
+          für kleine Restaurants und Handwerksbetriebe – zum Festpreis und in zwei Wochen online.
+        </p>
+      </div>
+    </section>
+
+    <!-- Weiche: zwei gleichwertige Klickkarten -->
+    <section class="px-4 pb-16 sm:pb-24" aria-label="Zielgruppen-Auswahl">
+      <div class="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">
+        <a href="gastro.html" class="group flex flex-col justify-between bg-navy p-8 text-offwhite transition-colors hover:bg-terracotta sm:p-10">
+          <div>
+            <p class="font-display text-xs font-semibold uppercase tracking-[0.25em] text-terracotta transition-colors group-hover:text-offwhite/80">Restaurant, Café, Imbiss</p>
+            <h2 class="mt-3 font-display text-2xl font-bold uppercase tracking-[0.1em] sm:text-3xl">Für Gastronomie</h2>
+            <p class="mt-4 leading-relaxed text-offwhite/85">
+              Speisekarte, Öffnungszeiten, Reservierungsanfrage – alles, was Ihre Gäste suchen,
+              bevor sie kommen.
+            </p>
+          </div>
+          <p class="mt-8 font-display text-sm font-semibold uppercase tracking-[0.18em]">
+            Mehr erfahren <span aria-hidden="true">&rarr;</span>
+          </p>
+        </a>
+        <a href="handwerk.html" class="group flex flex-col justify-between bg-navy p-8 text-offwhite transition-colors hover:bg-terracotta sm:p-10">
+          <div>
+            <p class="font-display text-xs font-semibold uppercase tracking-[0.25em] text-terracotta transition-colors group-hover:text-offwhite/80">Meisterbetrieb, Werkstatt, Baustelle</p>
+            <h2 class="mt-3 font-display text-2xl font-bold uppercase tracking-[0.1em] sm:text-3xl">Für Handwerk</h2>
+            <p class="mt-4 leading-relaxed text-offwhite/85">
+              Leistungen, Referenzen, Anfahrtsgebiet – damit Kunden Sie finden und direkt
+              anfragen können.
+            </p>
+          </div>
+          <p class="mt-8 font-display text-sm font-semibold uppercase tracking-[0.18em]">
+            Mehr erfahren <span aria-hidden="true">&rarr;</span>
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Kurzvorstellung -->
+    <section class="border-t border-navy/10 px-4 py-16 sm:py-24">
+      <div class="mx-auto grid max-w-5xl items-center gap-10 sm:grid-cols-2 sm:gap-16">
+        <div>
+          <h2 class="font-display text-2xl font-bold uppercase tracking-[0.12em] sm:text-3xl">Wer hinter Hand &amp; Herd steht</h2>
+          <p class="mt-6 leading-relaxed">
+            Hand &amp; Herd ist ein Ein-Personen-Webstudio aus Frankfurt am Main. Ich baue
+            Websites ausschließlich für zwei Branchen: Gastronomie und Handwerk. Keine
+            austauschbaren Baukasten-Seiten, sondern Auftritte, die zu Ihrem Betrieb passen –
+            und die Sie sich ohne Agenturbudget leisten können.
+          </p>
+          <p class="mt-4 leading-relaxed">
+            Sie bekommen einen festen Ansprechpartner, einen festen Preis und einen festen
+            Termin. Und eine Website, die auch auf dem Handy Ihrer Kundschaft schnell lädt.
+          </p>
+        </div>
+        <!-- Platzhalter: Portraitfoto -->
+        <div class="flex aspect-[4/5] items-center justify-center bg-navy p-6 text-center" role="img" aria-label="Platzhalter für ein Portraitfoto">
+          <p class="font-display text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/70">
+            Platzhalter:<br>Ihr Portraitfoto<br>am Schreibtisch oder beim Kunden
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ablauf -->
+    <section class="bg-navy px-4 py-16 text-offwhite sm:py-24">
+      <div class="mx-auto max-w-5xl">
+        <h2 class="text-center font-display text-2xl font-bold uppercase tracking-[0.12em] sm:text-3xl">So einfach ist der Ablauf</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-center leading-relaxed text-offwhite/85">
+          Drei Schritte, keine Überraschungen. Von unserem ersten Gespräch bis zu Ihrer
+          fertigen Website vergehen in der Regel zwei Wochen.
+        </p>
+        <ol class="mt-12 grid gap-10 sm:grid-cols-3 sm:gap-8">
+          <li class="text-center">
+            <p class="font-display text-5xl font-bold text-terracotta" aria-hidden="true">1</p>
+            <h3 class="mt-3 font-display text-base font-semibold uppercase tracking-[0.18em]">Gespräch</h3>
+            <p class="mt-3 leading-relaxed text-offwhite/85">
+              Wir telefonieren oder treffen uns in Ihrem Betrieb. Sie erzählen, ich höre zu –
+              danach wissen Sie genau, was Ihre Website kostet.
+            </p>
+          </li>
+          <li class="text-center">
+            <p class="font-display text-5xl font-bold text-terracotta" aria-hidden="true">2</p>
+            <h3 class="mt-3 font-display text-base font-semibold uppercase tracking-[0.18em]">Entwurf</h3>
+            <p class="mt-3 leading-relaxed text-offwhite/85">
+              Innerhalb einer Woche sehen Sie einen echten Entwurf im Browser – kein PDF,
+              keine Fachbegriffe. Änderungswünsche sind ausdrücklich erwünscht.
+            </p>
+          </li>
+          <li class="text-center">
+            <p class="font-display text-5xl font-bold text-terracotta" aria-hidden="true">3</p>
+            <h3 class="mt-3 font-display text-base font-semibold uppercase tracking-[0.18em]">Online</h3>
+            <p class="mt-3 leading-relaxed text-offwhite/85">
+              Ich kümmere mich um Domain, Webspace und Einrichtung. Nach spätestens zwei
+              Wochen ist Ihre Website online – fertig eingerichtet und übergeben.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Kontakt-Anriss -->
+    <section class="px-4 py-16 text-center sm:py-24">
+      <div class="mx-auto max-w-2xl">
+        <h2 class="font-display text-2xl font-bold uppercase tracking-[0.12em] sm:text-3xl">Lernen wir uns kennen</h2>
+        <p class="mt-6 leading-relaxed">
+          Erzählen Sie mir kurz von Ihrem Betrieb – Sie bekommen innerhalb von 24 Stunden
+          eine ehrliche Einschätzung und einen Festpreis. Unverbindlich und kostenlos.
+        </p>
+        <a href="kontakt.html" class="mt-8 inline-block bg-terracotta px-8 py-4 font-display text-sm font-semibold uppercase tracking-[0.18em] text-offwhite transition-colors hover:bg-navy">
+          Jetzt Kontakt aufnehmen
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-navy text-offwhite">
+    <div class="mx-auto max-w-6xl px-4 py-12">
+      <div class="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-between">
+        <img src="assets/logo-dark.svg" alt="Hand &amp; Herd – Webdesign für Handwerker &amp; Gastronomen" class="h-14 w-auto" width="520" height="140">
+        <div class="text-center sm:text-right">
+          <p class="font-display text-xs font-semibold uppercase tracking-[0.2em] text-terracotta">Kontakt</p>
+          <p class="mt-2 leading-relaxed text-offwhite/85">
+            Hand &amp; Herd Webdesign · Frankfurt am Main<br>
+            <a href="mailto:hallo@handundherd.de" class="underline decoration-terracotta underline-offset-4 hover:text-terracotta">hallo@handundherd.de</a>
+          </p>
+        </div>
+      </div>
+      <div class="mt-10 flex flex-col items-center gap-4 border-t border-offwhite/15 pt-6 sm:flex-row sm:justify-between">
+        <p class="text-sm text-offwhite/60">&copy; 2026 Hand &amp; Herd Webdesign</p>
+        <ul class="flex gap-6 font-display text-xs font-semibold uppercase tracking-[0.15em]">
+          <li><a href="impressum.html" class="hover:text-terracotta">Impressum</a></li>
+          <li><a href="datenschutz.html" class="hover:text-terracotta">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
