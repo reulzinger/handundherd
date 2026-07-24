@@ -1,5 +1,10 @@
 /* Zusatz-Stile: Laufband und Scroll-Reveal. Ohne JS ist alles normal sichtbar. */
 
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
 @keyframes ticker {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -21,6 +26,19 @@ html.js .reveal.is-visible {
   html.js .reveal { opacity: 1; transform: none; transition: none; }
 }
 
+/* Hero: exakt "Bildschirmhöhe minus Header" – Header-Höhe wird per Skript gemessen
+   (--header-h), damit Header + Hero zusammen nie höher als ein Screen sind. */
+.hero { height: calc(100svh - var(--header-h, 5.5rem)); }
+
+/* Hero-Hintergrund: langsamer Zoom beim Laden, bleibt danach herangezoomt. */
+.hero-bg-zoom {
+  animation: hero-bg-zoom 20s ease-out forwards;
+}
+@keyframes hero-bg-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.12); }
+}
+
 #site-header { transition: box-shadow 0.3s ease; }
 #site-header.is-scrolled { box-shadow: 0 8px 24px -12px rgba(30, 58, 95, 0.35); }
 #site-header .header-inner { transition: padding 0.3s ease; }
@@ -35,4 +53,54 @@ html.js .reveal.is-visible {
 .mask-fade-left {
   -webkit-mask-image: linear-gradient(to left, black 55%, transparent 100%);
   mask-image: linear-gradient(to left, black 55%, transparent 100%);
+}
+
+/* Hero: gestaffeltes Einblenden beim Laden. */
+@keyframes hero-in {
+  to { opacity: 1; transform: none; }
+}
+.hero-in {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: hero-in 0.7s ease-out forwards;
+}
+.hero-in-1 { animation-delay: 0.05s; }
+.hero-in-2 { animation-delay: 0.2s; }
+.hero-in-3 { animation-delay: 0.35s; }
+.hero-in-4 { animation-delay: 0.5s; }
+.hero-in-5 { animation-delay: 0.65s; }
+
+/* Hero: dezenter Lichtschimmer, an die Buchstaben geklippt, läuft über die ganze Zeile.
+   Wichtig: auf einem eigenen inneren <span>, NIE auf demselben Element wie .hero-in –
+   zwei „animation“-Deklarationen auf einem Element überschreiben sich sonst gegenseitig
+   (nur die letzte gewinnt), wodurch die Einblend-Animation nie fertig läuft und der Text
+   bei opacity:0 hängen bleibt. */
+.shimmer-text {
+  background: linear-gradient(100deg, rgba(245, 242, 237, 0.75) 35%, #fff 50%, rgba(245, 242, 237, 0.75) 65%);
+  background-size: 220% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-sweep 4s ease-in-out infinite;
+}
+/* Terracotta-Akzente (die "&") sollen nicht mit-transparent werden. */
+.shimmer-text .shimmer-accent { -webkit-text-fill-color: currentColor; }
+@keyframes shimmer-sweep {
+  0%, 15% { background-position: 160% center; }
+  85%, 100% { background-position: -60% center; }
+}
+
+/* Hero: Scroll-Hinweis am unteren Rand. */
+.scroll-cue { animation: scroll-cue-bounce 2.2s ease-in-out infinite; }
+@keyframes scroll-cue-bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-zoom { animation: none; }
+  .hero-in { opacity: 1; transform: none; animation: none; }
+  .shimmer-text { animation: none; background-position: 0 center; }
+  .scroll-cue { animation: none; }
 }
