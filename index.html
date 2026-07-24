@@ -38,7 +38,7 @@
   <header id="site-header" class="sticky top-0 z-50 border-b border-navy/10 bg-white/90 backdrop-blur-md">
     <div class="header-inner mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-5 sm:flex-row sm:justify-between">
       <a href="index.html" class="shrink-0" aria-label="Hand &amp; Herd – Startseite">
-        <img src="assets/logo-nav.png" alt="Hand &amp; Herd – Webdesign für Handwerker &amp; Gastronomen" class="h-[2.45rem] w-auto" width="1022" height="160">
+        <img src="assets/logo-nav.png" alt="Hand &amp; Herd – Webdesign für Handwerker &amp; Gastronomen" class="h-[2.45rem] w-auto" width="1189" height="204">
       </a>
       <nav aria-label="Hauptnavigation">
         <ul class="flex items-center gap-5 font-display text-xs font-semibold uppercase tracking-[0.18em] sm:gap-8 sm:text-sm">
@@ -49,48 +49,50 @@
       </nav>
     </div>
   </header>
+  <script>
+    (function () {
+      var header = document.getElementById('site-header');
+      if (!header) return;
+      function setHeaderHeight() {
+        document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+      }
+      setHeaderHeight();
+      window.addEventListener('resize', setHeaderHeight);
+    })();
+  </script>
 
   <main id="main">
 
     <!-- Hero -->
-    <section class="hero relative overflow-hidden px-4 pb-16 pt-20 text-center sm:pb-24 sm:pt-32">
-      <div class="absolute inset-0 bg-[url('assets/hero-bg.jpg')] bg-cover bg-center" aria-hidden="true"></div>
+    <section class="hero relative flex items-center justify-center overflow-hidden px-4 text-center">
+      <div class="hero-bg-zoom absolute inset-0 bg-[url('assets/hero-bg.jpg')] bg-cover bg-center" aria-hidden="true"></div>
       <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/85 to-navy/60" aria-hidden="true"></div>
-      <span aria-hidden="true" class="pointer-events-none absolute -top-24 right-[-3rem] select-none font-display text-[18rem] font-bold leading-none text-offwhite/10 sm:right-[-2rem] sm:text-[30rem] mask-fade-right">&amp;</span>
-      <div class="relative mx-auto max-w-3xl">
-        <p class="font-display text-xs font-semibold uppercase tracking-[0.3em] text-terracotta">Aus Frankfurt, für Rhein-Main</p>
-        <h1 class="mt-5 font-display text-4xl font-bold uppercase tracking-[0.12em] text-offwhite sm:text-7xl">
-          Hand <span class="align-baseline text-5xl text-terracotta sm:text-8xl">&amp;</span> Herd
+      <span aria-hidden="true" class="pointer-events-none absolute left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 select-none font-display text-[27rem] font-bold leading-none text-offwhite/10 sm:text-[45rem]">&amp;</span>
+      <div class="relative mx-auto max-w-4xl">
+        <p class="hero-in hero-in-1 font-display text-xs font-semibold uppercase tracking-[0.3em] text-terracotta sm:text-base">Aus Frankfurt, für Rhein-Main</p>
+        <h1 class="hero-in hero-in-2 mt-4 font-display text-5xl font-bold uppercase tracking-[0.12em] text-offwhite sm:text-8xl">
+          Hand <span class="align-baseline text-6xl text-terracotta sm:text-9xl">&amp;</span> Herd
         </h1>
-        <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-offwhite/90 sm:text-xl">
+        <p class="hero-in hero-in-3 mx-auto mt-4 max-w-2xl text-base leading-relaxed text-offwhite/90 sm:text-2xl">
           Websites für Menschen, die mit den Händen arbeiten: klare, schnelle Internetauftritte
           für kleine Restaurants und Handwerksbetriebe – zum Festpreis und in zwei Wochen online.
         </p>
+        <p class="hero-in hero-in-4 mt-4 font-display text-xs font-semibold uppercase tracking-[0.15em] sm:text-base">
+          <span class="shimmer-text">Festpreis <span class="shimmer-accent text-terracotta">&amp;</span> In 2 Wochen online <span class="shimmer-accent text-terracotta">&amp;</span> Ein Ansprechpartner</span>
+        </p>
+        <a href="kontakt.html" class="hero-in hero-in-5 group mt-6 inline-flex items-center gap-3 bg-terracotta px-7 py-3.5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-offwhite transition-colors hover:bg-offwhite hover:text-navy sm:px-9 sm:py-5 sm:text-base">
+          Unverbindlich anfragen <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+        </a>
       </div>
+      <a href="#weiche" aria-label="Nach unten scrollen" class="scroll-cue absolute bottom-8 left-1/2 -translate-x-1/2 text-offwhite/70 transition-colors hover:text-offwhite">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7" aria-hidden="true">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </a>
     </section>
 
-    <!-- Laufband -->
-    <div class="overflow-hidden bg-terracotta py-3" aria-hidden="true">
-      <div class="ticker-track flex w-max">
-        <p class="flex shrink-0 items-center gap-6 pr-6 font-display text-xs font-semibold uppercase tracking-[0.25em] text-offwhite">
-          <span>Festpreis statt „auf Anfrage“</span><span class="text-navy">&amp;</span>
-          <span>In 2 Wochen online</span><span class="text-navy">&amp;</span>
-          <span>Aus Frankfurt, für Rhein-Main</span><span class="text-navy">&amp;</span>
-          <span>Kein Baukasten, echtes Handwerk</span><span class="text-navy">&amp;</span>
-          <span>Ein Ansprechpartner</span><span class="text-navy">&amp;</span>
-        </p>
-        <p class="flex shrink-0 items-center gap-6 pr-6 font-display text-xs font-semibold uppercase tracking-[0.25em] text-offwhite">
-          <span>Festpreis statt „auf Anfrage“</span><span class="text-navy">&amp;</span>
-          <span>In 2 Wochen online</span><span class="text-navy">&amp;</span>
-          <span>Aus Frankfurt, für Rhein-Main</span><span class="text-navy">&amp;</span>
-          <span>Kein Baukasten, echtes Handwerk</span><span class="text-navy">&amp;</span>
-          <span>Ein Ansprechpartner</span><span class="text-navy">&amp;</span>
-        </p>
-      </div>
-    </div>
-
     <!-- Weiche: zwei gleichwertige Klickkarten -->
-    <section class="px-4 py-16 sm:py-24" aria-label="Zielgruppen-Auswahl">
+    <section id="weiche" class="px-4 py-16 sm:py-24" aria-label="Zielgruppen-Auswahl">
       <div class="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">
         <a href="handwerk.html" class="reveal group flex flex-col justify-between bg-navy p-8 text-offwhite transition-all duration-300 hover:-translate-y-1 hover:bg-terracotta sm:p-10">
           <div>
