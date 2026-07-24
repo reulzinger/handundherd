@@ -20,3 +20,19 @@ html.js .reveal.is-visible {
   .ticker-track { animation: none; }
   html.js .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+#site-header { transition: box-shadow 0.3s ease; }
+#site-header.is-scrolled { box-shadow: 0 8px 24px -12px rgba(30, 58, 95, 0.35); }
+#site-header .header-inner { transition: padding 0.3s ease; }
+#site-header.is-scrolled .header-inner { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+#site-header .header-inner img { transition: height 0.3s ease; }
+#site-header.is-scrolled .header-inner img { height: 2rem; }
+
+.mask-fade-right {
+  -webkit-mask-image: linear-gradient(to right, black 55%, transparent 100%);
+  mask-image: linear-gradient(to right, black 55%, transparent 100%);
+}
+.mask-fade-left {
+  -webkit-mask-image: linear-gradient(to left, black 55%, transparent 100%);
+  mask-image: linear-gradient(to left, black 55%, transparent 100%);
+}

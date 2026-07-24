@@ -13,3 +13,14 @@ if ('IntersectionObserver' in window) {
 } else {
   document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
 }
+
+// Sticky Header: kompakter mit Schatten, sobald gescrollt wird.
+(function () {
+  var header = document.getElementById('site-header');
+  if (!header) return;
+  function updateHeader() {
+    header.classList.toggle('is-scrolled', window.scrollY > 10);
+  }
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
+})();

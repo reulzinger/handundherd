@@ -35,10 +35,10 @@
 
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-terracotta focus:px-4 focus:py-2 focus:text-offwhite">Zum Inhalt springen</a>
 
-  <header class="border-b border-navy/10 bg-offwhite">
-    <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-5 sm:flex-row sm:justify-between">
+  <header id="site-header" class="sticky top-0 z-50 border-b border-navy/10 bg-white/90 backdrop-blur-md">
+    <div class="header-inner mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-5 sm:flex-row sm:justify-between">
       <a href="index.html" class="shrink-0" aria-label="Hand &amp; Herd – Startseite">
-        <img src="assets/logo-light.svg" alt="Hand &amp; Herd – Webdesign für Handwerker &amp; Gastronomen" class="h-14 w-auto" width="520" height="140">
+        <img src="assets/logo-nav.png" alt="Hand &amp; Herd – Webdesign für Handwerker &amp; Gastronomen" class="h-[2.45rem] w-auto" width="1022" height="160">
       </a>
       <nav aria-label="Hauptnavigation">
         <ul class="flex items-center gap-5 font-display text-xs font-semibold uppercase tracking-[0.18em] sm:gap-8 sm:text-sm">
@@ -54,6 +54,8 @@
 
     <!-- Hero -->
     <section class="relative overflow-hidden bg-navy px-4 py-16 text-offwhite sm:py-24">
+      <div class="absolute inset-0 bg-[url('assets/gastro-bg.jpg')] bg-cover bg-center" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/85 to-navy/60" aria-hidden="true"></div>
       <span aria-hidden="true" class="pointer-events-none absolute -top-20 right-[-3rem] select-none font-display text-[16rem] font-bold leading-none text-offwhite/5 sm:text-[26rem]">&amp;</span>
       <div class="relative mx-auto max-w-3xl text-center">
         <p class="font-display text-xs font-semibold uppercase tracking-[0.3em] text-terracotta">Für Restaurants, Cafés &amp; Imbisse</p>
@@ -161,21 +163,15 @@
       <div class="mx-auto max-w-5xl">
         <h2 class="text-center font-display text-2xl font-bold uppercase tracking-[0.12em] sm:text-3xl">So könnte Ihre Seite aussehen</h2>
         <div class="mt-12 grid gap-6 sm:grid-cols-3">
-          <div class="flex aspect-[4/3] items-center justify-center bg-terracotta p-6 text-center sm:col-span-2 sm:aspect-auto" role="img" aria-label="Platzhalter für ein großes Foodfoto">
-            <p class="font-display text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/90">
-              Platzhalter:<br>Großes Foodfoto –<br>Ihr Signature-Gericht
-            </p>
+          <div class="aspect-[4/3] overflow-hidden sm:col-span-2 sm:aspect-auto">
+            <img src="assets/gastro-example-food.jpg" alt="Platzhalter: großes Foodfoto eines Signature-Gerichts" class="h-full w-full object-cover" loading="lazy" width="1200" height="900">
           </div>
           <div class="grid gap-6">
-            <div class="flex aspect-[4/3] items-center justify-center bg-navy p-6 text-center" role="img" aria-label="Platzhalter für ein Foto vom Gastraum">
-              <p class="font-display text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/70">
-                Platzhalter:<br>Gastraum mit Atmosphäre
-              </p>
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/gastro-example-room.jpg" alt="Platzhalter: Gastraum mit Atmosphäre" class="h-full w-full object-cover" loading="lazy" width="900" height="675">
             </div>
-            <div class="flex aspect-[4/3] items-center justify-center bg-navy p-6 text-center" role="img" aria-label="Platzhalter für ein Foto vom Team">
-              <p class="font-display text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/70">
-                Platzhalter:<br>Sie und Ihr Team<br>hinterm Tresen
-              </p>
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/gastro-example-team.jpg" alt="Platzhalter: Team hinterm Tresen" class="h-full w-full object-cover" loading="lazy" width="900" height="675">
             </div>
           </div>
         </div>

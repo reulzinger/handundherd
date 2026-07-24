@@ -1,0 +1,5 @@
+leadgen/output/
+leadgen/data/
+leadgen/.venv/
+__pycache__/
+*.pyc
