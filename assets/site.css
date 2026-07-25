@@ -30,13 +30,46 @@ html.js .reveal.is-visible {
    (--header-h), damit Header + Hero zusammen nie höher als ein Screen sind. */
 .hero { height: calc(100svh - var(--header-h, 5.5rem)); }
 
-/* Hero-Hintergrund: langsamer Zoom beim Laden, bleibt danach herangezoomt. */
-.hero-bg-zoom {
-  animation: hero-bg-zoom 20s ease-out forwards;
+/* Hero-Text: kräftiger Schatten statt stärkerem Bild-Verlauf – das Hintergrundbild
+   bleibt so sichtbar, der Text ist trotzdem klar lesbar. */
+.hero-text-shadow {
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.55);
 }
+
+/* Hero-Hintergrund: langsamer Zoom beim Laden, bleibt danach herangezoomt.
+   Auf Desktop nur ein zentriertes Bild. Auf Mobile ist das Querformat-Foto bei
+   bg-cover so stark beschnitten, dass fast nichts vom Bild zu erkennen ist –
+   deshalb dort zwei Bildausschnitte (linker/rechter Fokus), die sich langsam
+   überblenden, statt dauerhaft nur einen schmalen Mittelstreifen zu zeigen. */
+.hero-bg { background-position: center; animation: hero-bg-zoom 20s ease-out forwards; }
+.hero-bg-b { display: none; }
+
 @keyframes hero-bg-zoom {
   from { transform: scale(1); }
   to { transform: scale(1.12); }
+}
+
+@media (max-width: 639px) {
+  .hero-bg-a {
+    background-position: 25% center;
+    animation: hero-bg-zoom 20s ease-out forwards, hero-crossfade-a 12s ease-in-out infinite;
+  }
+  .hero-bg-b {
+    display: block;
+    opacity: 0;
+    background-position: 75% center;
+    animation: hero-bg-zoom 20s ease-out forwards, hero-crossfade-b 12s ease-in-out infinite;
+  }
+}
+@keyframes hero-crossfade-a {
+  0%, 42% { opacity: 1; }
+  50%, 92% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes hero-crossfade-b {
+  0%, 42% { opacity: 0; }
+  50%, 92% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 #site-header { transition: box-shadow 0.3s ease; }
@@ -99,7 +132,8 @@ html.js .reveal.is-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-bg-zoom { animation: none; }
+  .hero-bg { animation: none; }
+  .hero-bg-b { opacity: 0; }
   .hero-in { opacity: 1; transform: none; animation: none; }
   .shimmer-text { animation: none; background-position: 0 center; }
   .scroll-cue { animation: none; }
